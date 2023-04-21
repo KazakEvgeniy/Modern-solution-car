@@ -1,0 +1,67 @@
+@import './var';
+
+html,body{
+	height: 100%;
+}
+body{
+	display: flex;
+	flex-direction: column;
+}
+:root {
+	@extend %Montserrat-400;
+	font-size: 16px;
+   scroll-behavior: smooth;
+
+ }
+ ::-webkit-scrollbar {
+	width: 10px;
+ }
+
+
+ ::-webkit-scrollbar-thumb {
+	background-color: #b0b0b0;
+	border-radius: 15px;
+	
+ }
+main{
+	flex-grow: 1;
+}
+ 
+img{
+	display: block;
+	max-width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+.container {
+	max-width: 1220px;
+	margin: 0 auto;
+	padding: 0 10px;
+  }
+
+.title-section{
+	@extend %Montserrat-500;
+	font-size: 3.2em;
+	line-height: 48px;
+	color: $accent;
+}
+.desc-section{
+	@extend %Montserrat-500;
+	color: $grey;
+	font-size: 1.4em;
+	line-height: 30px;
+}
+
+.hide{
+	display: none ;
+}
+.swiper{
+	width: 100%;
+}
+
+.center-wrapper {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
