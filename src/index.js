@@ -1,4 +1,11 @@
 import './index.html';
+import './marketing.html';
+import './accounting.html';
+import './spares.html';
+import './stock.html';
+import './purchase.html';
+import './delivery.html';
+import './analytics.html';
 import './index.scss';
 import Swiper from 'swiper/bundle';
 import SwiperCore, { Navigation, Pagination } from 'swiper/core';

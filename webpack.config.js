@@ -33,6 +33,30 @@ module.exports = {
 			filename: 'marketing.html',
 			template: path.resolve(__dirname, 'src', 'marketing.html'),
 		}),
+		new HtmlWebpackPlugin({
+			filename: 'accounting.html',
+			template: path.resolve(__dirname, 'src', 'accounting.html'),
+		}),
+		new HtmlWebpackPlugin({
+			filename: 'spares.html',
+			template: path.resolve(__dirname, 'src', 'spares.html'),
+		}),
+		new HtmlWebpackPlugin({
+			filename: 'stock.html',
+			template: path.resolve(__dirname, 'src', 'stock.html'),
+		}),
+		new HtmlWebpackPlugin({
+			filename: 'purchase.html',
+			template: path.resolve(__dirname, 'src', 'purchase.html'),
+		}),
+		new HtmlWebpackPlugin({
+			filename: 'delivery.html',
+			template: path.resolve(__dirname, 'src', 'delivery.html'),
+		}),
+		new HtmlWebpackPlugin({
+			filename: 'analytics.html',
+			template: path.resolve(__dirname, 'src', 'analytics.html'),
+		}),
 		new MiniCssExtractPlugin({
 			filename: '[name].[contenthash].css',
 		}),
