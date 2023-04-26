@@ -8,7 +8,6 @@
 	<link rel="icon" href="../src/img/logo/logo2.png" sizes="32*32" type="image/png">
 	<script async src="https://kit.fontawesome.com/18da5a6cb9.js" crossorigin="anonymous"></script>
 	<title>auto</title>
-
 </head>
 
 <body>
@@ -508,6 +507,9 @@
 					src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad3082a7e26679147bb5ba460cacee38a6903ef2cbb0f699c5a9f96e127ad579f&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
 			</div>
 		</section>
+
+
+
 	</main>
 
 	<footer class="footer">
@@ -564,6 +566,31 @@
 			<p>Copyright &copy; 2023, All Right Reserved </p>
 		</div>
 	</footer>
+	<div class="modal fade">
+		<div class="modal__dialog">
+			<div class="modal__content">
+				<form action="#" class="form" method="post">
+					<h2 class="form__title"></h2>
+					<div class="form__close"><img src="./img/modal/cross.svg" alt="icon" class="modal__close-img">
+					</div>
+					<label for="name">Ваше имя</label>
+					<input type="text" id="name" name="name">
+
+					<label for="phone">Телефон</label>
+					<input type="tel" id="phone" name="phone">
+
+					<label for="email">Email</label>
+					<input type="email" id="email" name="email">
+
+					<label for="text">Комментарий</label>
+					<textarea id="text" name="text"></textarea>
+
+					<button type="submit">Отправить</button>
+
+				</form>
+			</div>
+		</div>
+	</div>
 </body>
 
 </html>

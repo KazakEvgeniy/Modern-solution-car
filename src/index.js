@@ -20,15 +20,27 @@ window.addEventListener('DOMContentLoaded', (e) => {
 		menuListLink = document.querySelectorAll('.menu__list-link'),
 		headerWrapper = document.querySelector('.header__wrapper'),
 		header = document.querySelector('.header'),
+		headerInner = document.querySelector('.header__inner'),
 		section = document.querySelectorAll('section[id]'),
 		menuBurger = document.querySelector('.menu-burger'),
 		menuListSocial = document.querySelector('.menu__list-item--social');
 
-	const headerInner = document.querySelector('.header__inner');
+
 
 
 	if (header.classList.contains('header--hide-top')) {
 		hideTopMenuOnScroll();
+	} else {
+		window.addEventListener('scroll', () => {
+			const scroll = window.pageYOffset;
+			if (scroll === 0) {
+				showTopMenuOnScroll()
+			} else {
+				hideTopMenuOnScroll();
+
+			}
+
+		});
 	}
 
 
@@ -49,23 +61,6 @@ window.addEventListener('DOMContentLoaded', (e) => {
 		header.classList.remove('header--top');
 		menuListLink.forEach(link => link.classList.remove('menu__list-link--size'));
 	}
-
-	window.addEventListener('scroll', () => {
-		const scroll = window.pageYOffset;
-		if (scroll === 0) {
-			showTopMenuOnScroll()
-		} else {
-			hideTopMenuOnScroll();
-
-		}
-
-	});
-
-
-
-
-
-
 
 
 
@@ -105,4 +100,58 @@ window.addEventListener('DOMContentLoaded', (e) => {
 
 	casesList.forEach(item => item.remove());
 
+
+
+
+
 })
+
+
+modal();
+
+
+
+function modal() {
+
+	const btns = document.querySelectorAll('[data-modal="modal"]'),
+		modal = document.querySelector('.modal'),
+		closeModal = document.querySelector('.form__close'),
+		formTitle = document.querySelector('.form__title');
+
+	btns.forEach(btn => {
+		btn.addEventListener('click', (e) => {
+			const target = e.target;
+			formTitle.innerText = target.innerText;
+			modal.classList.add('show');
+			modal.classList.remove('hide');
+
+		});
+
+	});
+
+
+	function closeModalWindow() {
+		modal.classList.add('hide');
+		modal.classList.remove('show');
+	}
+
+
+	modal.addEventListener('click', (e) => {
+		if (e.target === modal) {
+			closeModalWindow();
+		}
+	});
+
+
+	closeModal.addEventListener('click', closeModalWindow);
+
+
+	document.addEventListener('keydown', (e) => {
+
+		if (e.code === 'Escape' && modal.classList.contains('show')) {
+			closeModalWindow();
+		}
+	});
+
+
+}
