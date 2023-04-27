@@ -31,31 +31,31 @@ module.exports = {
 		}),
 		new HtmlWebpackPlugin({
 			filename: 'marketing.html',
-			template: path.resolve(__dirname, 'src', 'marketing.html'),
+			template: path.resolve(__dirname, 'src/pages', 'marketing.html'),
 		}),
 		new HtmlWebpackPlugin({
 			filename: 'accounting.html',
-			template: path.resolve(__dirname, 'src', 'accounting.html'),
+			template: path.resolve(__dirname, 'src/pages', 'accounting.html'),
 		}),
 		new HtmlWebpackPlugin({
 			filename: 'spares.html',
-			template: path.resolve(__dirname, 'src', 'spares.html'),
+			template: path.resolve(__dirname, 'src/pages', 'spares.html'),
 		}),
 		new HtmlWebpackPlugin({
 			filename: 'stock.html',
-			template: path.resolve(__dirname, 'src', 'stock.html'),
+			template: path.resolve(__dirname, 'src/pages', 'stock.html'),
 		}),
 		new HtmlWebpackPlugin({
 			filename: 'purchase.html',
-			template: path.resolve(__dirname, 'src', 'purchase.html'),
+			template: path.resolve(__dirname, 'src/pages', 'purchase.html'),
 		}),
 		new HtmlWebpackPlugin({
 			filename: 'delivery.html',
-			template: path.resolve(__dirname, 'src', 'delivery.html'),
+			template: path.resolve(__dirname, 'src/pages', 'delivery.html'),
 		}),
 		new HtmlWebpackPlugin({
 			filename: 'analytics.html',
-			template: path.resolve(__dirname, 'src', 'analytics.html'),
+			template: path.resolve(__dirname, 'src/pages', 'analytics.html'),
 		}),
 		new MiniCssExtractPlugin({
 			filename: '[name].[contenthash].css',
