@@ -6,19 +6,50 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" href="../img/logo/logo2.png" sizes="32*32" type="image/png">
+	<script async src="https://kit.fontawesome.com/18da5a6cb9.js" crossorigin="anonymous"></script>
 	<title>Учет автомобилей для разбора</title>
 </head>
 
 <body>
 	<header class="header header--hide-top">
 		<div class="container">
-			<div class="header__wrapper header__wrapper--top header__wrapper--line">
+			<div class="header__wrapper">
 				<a href="./index.html" class="logo">
-					<img class="logo__img" src="../../static/logo.png" alt="logo">
+					<img class="logo__img" src="../img/logo/logo2.png" alt="logo">
+					<span class="header__logo-text">MODERN SOLUTION</span>
 				</a>
-				<div class="header__inner">
-					<div class="header__contacts">
-						<a class="header__phone-link" href="tel:+375290000000">+375-29-000-00-00</a>
+
+				<button class="header__btn" type="button" data-modal="modal">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</button>
+
+				<div class="header-mobile">
+					<a class="header-mobile__link" href="tel:+375290000000">
+						<img class="header-mobile__img" src="../img/header/phone.png" alt="Телефон" width="40" height="40">
+					</a>
+					<div class="menu-burger">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+			</div>
+			<nav class="menu">
+				<ul class="menu__list">
+					<li class="menu__list-item">
+						<a class="menu__list-link" href="./index.html#product">возможности</a>
+					</li>
+					<li class="menu__list-item">
+						<a class="menu__list-link" href="./index.html#advantage">преимущества</a>
+					</li>
+					<li class="menu__list-item">
+						<a class="menu__list-link" href="./index.html#cases">КЕЙСЫ</a>
+					</li>
+					<li class="menu__list-item">
+						<a class="menu__list-link" href="./index.html#contacts">КОНТАКТЫ</a>
+					</li>
+					<li class="menu__list-item menu__list-item--btn">
+						<button class="request-btn" type="button" data-modal="modal">ОСТАВИТЬ ЗАЯВКУ</button>
+					</li>
+					<li class="menu__list-item menu__list-item--social">
 						<ul class="social-list">
 							<li class="social__item">
 								<a class="social-list__item-link" href="#">
@@ -41,44 +72,9 @@
 								</a>
 							</li>
 						</ul>
-					</div>
-				</div>
-
-				<button class="header__btn" type="button" data-modal="modal">получить консультацию</button>
-
-				<div class="header-mobile">
-
-					<a class="header-mobile__link" href="tel:+375290000000">
-						<img class="header-mobile__img" src="../img/header/phone.png" alt="phone" width="40" height="40">
-					</a>
-
-					<div class="menu-burger">
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
-
-				</div>
-
-			</div>
-
-			<nav class="menu">
-				<ul class="menu__list">
-					<li class="menu__list-item">
-						<a class="menu__list-link" href="./index.html#product">возможности</a>
-					</li>
-					<li class="menu__list-item">
-						<a class="menu__list-link" href="./index.html#advantage">преимущества</a>
-					</li>
-					<li class="menu__list-item">
-						<a class="menu__list-link" href="./index.html#cases">КЕЙСЫ</a>
-					</li>
-					<li class="menu__list-item">
-						<a class="menu__list-link" href="./index.html#contacts">КОНТАКТЫ</a>
 					</li>
 				</ul>
 			</nav>
-		</div>
 		</div>
 	</header>
 	<main>
@@ -97,7 +93,7 @@
 						</p>
 						<button class="request-btn" type="button" data-modal="modal">оставить заявку</button>
 					</div>
-					<img class="management__img" src="../img/management/managment-auto.png" alt="car" width="500"
+					<img class="accounting__img" src="../img/management/managment-auto.png" alt="car" width="500"
 						height="350">
 				</div>
 			</div>

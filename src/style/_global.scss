@@ -53,12 +53,31 @@ img{
 	line-height: 30px;
 }
 
+.show{
+	display: block;
+}
 .hide{
-	display: none ;
+	display: none;
 }
 .swiper{
 	width: 100%;
 }
+.logo{
+	display: flex;
+	align-items: center;
+	z-index: 200;
+}
+  .logo__img{
+   width: 32px;
+	height: 32px;
+   margin-right: 10px;
+}
+  .header__logo-text{
+	color: #000;
+	font-size: 20px;
+	@extend %Montserrat-500 ;
+}
+
 
 .center-wrapper {
 	position: absolute;
@@ -82,4 +101,29 @@ img{
 
 .request-btn:hover{
 	box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.menu-burger{
+	display: block;
+	position: relative;
+	height: 28px;
+	width: 35px;
+	cursor: pointer;
+}
+
+.menu-burger>span{
+	position: absolute;
+	content: '';
+	height: 4px;
+	width: 100%;
+	border-radius: 20px;
+	background-color: #f6b81a;
+}
+.menu-burger>span:nth-child(2){
+	top: 50%;
+	transform: translateY(-50%);
+	}
+
+.menu-burger>span:last-child{
+bottom: 0;
 }

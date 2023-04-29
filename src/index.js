@@ -1,3 +1,5 @@
+'use strict';
+
 import './index.html';
 import './pages/marketing.html';
 import './pages/accounting.html';
@@ -11,7 +13,7 @@ import Swiper from 'swiper/bundle';
 import SwiperCore, { Navigation, Pagination } from 'swiper/core';
 
 
-window.addEventListener('DOMContentLoaded', (e) => {
+document.addEventListener('DOMContentLoaded', (e) => {
 	e.preventDefault();
 
 	const menu = document.querySelector('.menu'),
@@ -20,47 +22,66 @@ window.addEventListener('DOMContentLoaded', (e) => {
 		menuListLink = document.querySelectorAll('.menu__list-link'),
 		headerWrapper = document.querySelector('.header__wrapper'),
 		header = document.querySelector('.header'),
-		headerInner = document.querySelector('.header__inner'),
-		section = document.querySelectorAll('section[id]'),
-		menuBurger = document.querySelector('.menu-burger'),
-		menuListSocial = document.querySelector('.menu__list-item--social');
+		menuBurger = document.querySelector('.menu-burger');
 
 
+
+	function headerMobile() { //скрывает/показывает меню при клике
+		menuList.classList.toggle('header-mobile--menu');
+	};
+
+	function hideTopMenuOnScroll() { //скрывает меню при скролле
+		header.classList.remove('header--top');
+		headerWrapper.classList.add('header__wrapper--line');
+		menuListLink.forEach(link => link.classList.remove('menu__list-link--size'));
+		menu.classList.remove('menu--top');
+		headerContacts.classList.remove('header__contacts--top');
+		menuList.classList.remove('menu__list--top');
+	}
+
+	function showTopMenuOnScroll() { // показываеет основное меню в статике
+		header.classList.add('header--top');
+		headerWrapper.classList.remove('header__wrapper--line');
+		menu.classList.add('menu--top');
+		headerContacts.classList.add('header__contacts--top');
+		menuList.classList.add('menu__list--top');
+		menuListLink.forEach(link => link.classList.add('menu__list-link--size'));
+	}
+
+
+	menuBurger.addEventListener('click', () => {
+		headerMobile();
+	});
+
+	menuListLink.forEach((item) => {
+
+		item.addEventListener('click', () => {
+			headerMobile();
+		})
+
+	});
 
 
 	if (header.classList.contains('header--hide-top')) {
-		hideTopMenuOnScroll();
+		header.classList.add('header--top');
+		headerWrapper.classList.remove('header__wrapper--line');
+		menu.classList.add('menu--top');
+		menuList.classList.add('menu__list--top');
+		menuListLink.forEach(link => link.classList.add('menu__list-link--size'));
 	} else {
 		window.addEventListener('scroll', () => {
 			const scroll = window.pageYOffset;
 			if (scroll === 0) {
-				showTopMenuOnScroll()
-			} else {
 				hideTopMenuOnScroll();
+			} else {
 
+				showTopMenuOnScroll();
 			}
 
 		});
 	}
 
 
-	function hideTopMenuOnScroll() {
-		headerInner.append(menu);
-		headerWrapper.classList.remove('header__wrapper--top', 'header__wrapper--line');
-		menuList.classList.add('menu__list--top');
-		headerContacts.style.display = 'none';
-		header.classList.add('header--top');
-		menuListLink.forEach(link => link.classList.add('menu__list-link--size'));
-	}
-
-	function showTopMenuOnScroll() {
-		headerWrapper.after(menu);
-		headerWrapper.classList.add('header__wrapper--top', 'header__wrapper--line');
-		menuList.classList.remove('menu__list--top');
-		headerContacts.style.display = 'flex';
-		header.classList.remove('header--top');
-		menuListLink.forEach(link => link.classList.remove('menu__list-link--size'));
-	}
 
 
 
@@ -99,10 +120,6 @@ window.addEventListener('DOMContentLoaded', (e) => {
 	})
 
 	casesList.forEach(item => item.remove());
-
-
-
-
 
 })
 
@@ -155,3 +172,4 @@ function modal() {
 
 
 }
+

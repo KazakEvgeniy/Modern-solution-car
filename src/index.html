@@ -14,13 +14,16 @@
 
 	<header class="header">
 		<div class="container">
-			<div class="header__wrapper header__wrapper--top header__wrapper--line">
+			<div class="header__wrapper header__wrapper--line">
 				<a href="#" class="logo">
-					<img class="logo__img" src="../static/logo.png" alt="logo">
+					<img class="logo__img" src="./img/logo/logo2.png" alt="logo">
+					<span class="header__logo-text">MODERN SOLUTION</span>
 				</a>
-				<div class="header__inner">
-					<div class="header__contacts">
-						<a class="header__phone-link" href="tel:+375290000000">+375-29-000-00-00</a>
+				<div class="header__contacts">
+					<div class="header__phones">
+						<a class="header__phones-link" href="tel:+375290000000">+375-29-000-00-00</a>
+					</div>
+					<div class="header__social">
 						<ul class="social-list">
 							<li class="social__item">
 								<a class="social-list__item-link" href="#">
@@ -46,24 +49,19 @@
 					</div>
 				</div>
 
-				<button class="header__btn" type="button" data-modal="modal">получить консультацию</button>
+				<button class="header__btn" type="button" data-modal="modal">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</button>
 
 				<div class="header-mobile">
-
 					<a class="header-mobile__link" href="tel:+375290000000">
-						<img class="header-mobile__img" src="./img/header/phone.png" alt="phone" width="40" height="40">
+						<img class="header-mobile__img" src="./img/header/phone.png" alt="Телефон" width="40" height="40">
 					</a>
-
 					<div class="menu-burger">
 						<span></span>
 						<span></span>
 						<span></span>
 					</div>
-
 				</div>
-
 			</div>
-
 			<nav class="menu">
 				<ul class="menu__list">
 					<li class="menu__list-item">
@@ -78,16 +76,42 @@
 					<li class="menu__list-item">
 						<a class="menu__list-link" href="#contacts">контакты</a>
 					</li>
+					<li class="menu__list-item menu__list-item--btn">
+						<button class="request-btn" type="button" data-modal="modal">ОСТАВИТЬ ЗАЯВКУ</button>
+					</li>
+					<li class="menu__list-item menu__list-item--social">
+						<ul class="social-list">
+							<li class="social__item">
+								<a class="social-list__item-link" href="#">
+									<i class="fa-brands fa-facebook fa-xl" style="color: #65a8eb;"></i>
+								</a>
+							</li>
+							<li class="social__item">
+								<a class="social-list__item-link" href="#">
+									<i class="fa-brands fa-square-instagram fa-xl" style="color: #65a8eb;"></i>
+								</a>
+							</li>
+							<li class="social__item">
+								<a class="social-list__item-link" href="#">
+									<i class="fa-brands fa-linkedin fa-xl" style="color: #65a8eb;"></i>
+								</a>
+							</li>
+							<li class="social__item">
+								<a class="social-list__item-link" href="#">
+									<i class="fa-brands fa-telegram fa-xl" style="color: #65a8eb;"></i>
+								</a>
+							</li>
+						</ul>
+					</li>
 				</ul>
 			</nav>
-		</div>
 		</div>
 	</header>
 	<main>
 		<!-- top -->
 		<section class="top">
 			<div class="container">
-				<div class="top__wrapper center-wrapper">
+				<div class="top__wrapper">
 					<div class="top__inner">
 						<h1 class="top__title title-section">
 							Управление авторазборкой
@@ -130,10 +154,10 @@
 			</div>
 
 		</section>
-		<!--management -->
+		<!-- management -->
 		<section class="management">
 			<div class="container">
-				<h2 class="management__title title-section">
+				<h2 class="management__title">
 					Единая платформа для управления
 					авторазборкой, продажами, маркетингом
 					и бизнес-процессами
@@ -210,12 +234,12 @@
 		<section class="advantage" id="advantage">
 			<div class="container">
 				<ul class="advantage__list">
-					<li class="advantage__item">
+					<li class="advantage__item advantage__item--order-1">
 						<h3 class="advantage__title title-section">
 							Преимущества
 						</h3>
 					</li>
-					<li class="advantage__item advantage__item--bg">
+					<li class="advantage__item advantage__item--order-2 ">
 						<ul class="advantage__item-list">
 							<li class="advantage__item-list-element">
 								Автоматическая выгрузка товаров
@@ -234,18 +258,18 @@
 							</li>
 						</ul>
 					</li>
-					<li class="advantage__item advantage__item--bg-2">
+					<li class="advantage__item advantage__item--order-3 ">
 						<p class="advantage__desc">
 							Вам больше не придется менять цены на товары в нескольких местах, например, на площадке
 							bamper.by и на сайте. Достаточно подключить ваш сайт к нашему сервису и у вас всегда будут
 							актуальные цены и наличие на сайте.
 						</p>
 					</li>
-					<li class="advantage__item--details">
-						<img class="advantage__item-details-img" src="./img/product/details.png" alt="Детали" height="300"
-							width="600">
+					<li class="advantage__item advantage__item--order-4">
+						<img class="advantage__item-details-img" src="./img/product/details.png" alt="Детали" height="250"
+							width="350">
 					</li>
-					<li class="advantage__item advantage__item--sites">
+					<li class="advantage__item advantage__item--order-5">
 						<ul class="list-sites">
 							<li class="list-sites__item">
 								<img class="list-sites__item-img" src="./img/top/kufar.png" alt="kufar" width="100"
@@ -260,12 +284,12 @@
 							</li>
 						</ul>
 					</li>
-					<li class="advantage__item advantage__item--bg">
+					<li class="advantage__item advantage__item--order-6">
 						<h3 class="advantage__title advantage__title--auto">
 							Автоматическая выгрузка автзапчастей на торговые площадки ежедневно
 						</h3>
 					</li>
-					<li class="advantage__item advantage__item--bg-2">
+					<li class="advantage__item advantage__item--order-7">
 
 						<p class="advantage__desc ">
 							Автоматическое и круглосуточное обновление ваших предложений на торговых площадках Беларуси, без
@@ -273,7 +297,7 @@
 							их актуальностью.
 						</p>
 					</li>
-					<li class="advantage__item ">
+					<li class="advantage__item advantage__item--order-8">
 
 						<h3 class="advantage__title advantage__title--auto">
 							Возможна интеграция с другими торговыми площадками
@@ -303,7 +327,7 @@
 		<!-- documents -->
 		<section class="documents">
 			<div class="container">
-				<h3 class="documents__title title-section">
+				<h3 class="documents__title">
 					Полноценный обмен документами и справочниками
 					с бухгалтерией
 				</h3>
@@ -312,7 +336,7 @@
 		<!-- cases -->
 		<section class="cases" id="cases">
 			<div class="container">
-				<h2 class="cases__title title-section">КЕЙСЫ ВНЕДРЕНИЯ РЕШЕНИЙ 1С </h2>
+				<h2 class="cases__title">КЕЙСЫ ВНЕДРЕНИЯ РЕШЕНИЙ 1С </h2>
 				<ul class="cases__list">
 					<li class="cases__list-item">
 						<img src="./img/cases/logo_kriogaz_1x.png" alt="Криогаз">
@@ -521,7 +545,7 @@
 			<div class="footer__inner">
 				<div class="logo">
 					<img class="logo__img" src="img/logo/logo2.png" alt="logo">
-					<span class="logo__text">MODERN SOLUTION</span>
+					<span class="footer__logo-text">MODERN SOLUTION</span>
 				</div>
 				<div class="footer-social">
 					<ul class="footer-social__list">
