@@ -1,33 +1,38 @@
 @import './var';
 
-html,body{
+html,
+body {
 	height: 100%;
 }
-body{
+
+body {
 	display: flex;
 	flex-direction: column;
 }
+
 :root {
 	@extend %Montserrat-400;
 	font-size: 16px;
-   scroll-behavior: smooth;
+	scroll-behavior: smooth;
 
- }
- ::-webkit-scrollbar {
+}
+
+::-webkit-scrollbar {
 	width: 10px;
- }
+}
 
 
- ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
 	background-color: #b0b0b0;
 	border-radius: 15px;
-	
- }
-main{
+
+}
+
+main {
 	flex-grow: 1;
 }
- 
-img{
+
+img {
 	display: block;
 	max-width: 100%;
 	height: auto;
@@ -38,44 +43,50 @@ img{
 	max-width: 1220px;
 	margin: 0 auto;
 	padding: 0 10px;
-  }
+}
 
-.title-section{
+.title-section {
 	@extend %Montserrat-500;
 	font-size: 3.2em;
 	line-height: 48px;
 	color: $accent;
 }
-.desc-section{
+
+.desc-section {
 	@extend %Montserrat-500;
 	color: $grey;
 	font-size: 1.4em;
 	line-height: 30px;
 }
 
-.show{
+.show {
 	display: block;
 }
-.hide{
+
+.hide {
 	display: none;
 }
-.swiper{
+
+.swiper {
 	width: 100%;
 }
-.logo{
+
+.logo {
 	display: flex;
 	align-items: center;
-	z-index: 200;
+	z-index: 100;
 }
-  .logo__img{
-   width: 32px;
+
+.logo__img {
+	width: 32px;
 	height: 32px;
-   margin-right: 10px;
+	margin-right: 10px;
 }
-  .header__logo-text{
+
+.header__logo-text {
 	color: #000;
 	font-size: 20px;
-	@extend %Montserrat-500 ;
+	@extend %Montserrat-500;
 }
 
 
@@ -85,9 +96,9 @@ img{
 	transform: translateY(-50%);
 }
 
-.request-btn{
+.request-btn {
 	@extend %Montserrat-500;
-	background-color:#f6b81a;
+	background-color: #f6b81a;
 	border: none;
 	font-size: 12px;
 	text-transform: uppercase;
@@ -99,11 +110,11 @@ img{
 	transition: all .3s;
 }
 
-.request-btn:hover{
+.request-btn:hover {
 	box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
-.menu-burger{
+.menu-burger {
 	display: block;
 	position: relative;
 	height: 28px;
@@ -111,7 +122,7 @@ img{
 	cursor: pointer;
 }
 
-.menu-burger>span{
+.menu-burger>span {
 	position: absolute;
 	content: '';
 	height: 4px;
@@ -119,11 +130,12 @@ img{
 	border-radius: 20px;
 	background-color: #f6b81a;
 }
-.menu-burger>span:nth-child(2){
+
+.menu-burger>span:nth-child(2) {
 	top: 50%;
 	transform: translateY(-50%);
-	}
+}
 
-.menu-burger>span:last-child{
-bottom: 0;
+.menu-burger>span:last-child {
+	bottom: 0;
 }

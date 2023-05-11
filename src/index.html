@@ -21,7 +21,7 @@
 				</a>
 				<div class="header__contacts">
 					<div class="header__phones">
-						<a class="header__phones-link" href="tel:+375290000000">+375-29-000-00-00</a>
+						<a class="header__phones-link" href="tel:+375257402263">+375 25 740-22-63</a>
 					</div>
 					<div class="header__social">
 						<ul class="social-list">
@@ -521,7 +521,7 @@
 					<div class="contacts__phones">
 						<h3 class="contacts__adress-title">Телефоны:</h3>
 						<address>
-							<a class="contacts__tel" href="tel:+375290000000">+375-29-000-00-00 <span>&mdash;
+							<a class="contacts__tel" href="tel:+375257402263">+375 25 740-22-63<span>&mdash;
 									MTS</span></a>
 						</address>
 					</div>
@@ -594,7 +594,7 @@
 	<div class="modal fade">
 		<div class="modal__dialog">
 			<div class="modal__content">
-				<form action="#" class="form" method="post">
+				<form action="server.php" class="form" method="post">
 					<h2 class="form__title"></h2>
 					<div class="form__close"><img src="./img/modal/cross.svg" alt="icon" class="modal__close-img">
 					</div>
@@ -602,7 +602,7 @@
 					<input type="text" id="name" name="name">
 
 					<label for="phone">Телефон</label>
-					<input type="tel" id="phone" name="phone">
+					<input class="phone" type="tel" id="phone" name="phone" required>
 
 					<label for="email">Email</label>
 					<input type="email" id="email" name="email">
