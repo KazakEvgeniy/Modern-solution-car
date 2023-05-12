@@ -5,7 +5,7 @@ $name = $_POST['name'];
 $phone = $_POST['phone'];
 $email = $_POST['email'];
 $text = $_POST['text'];
-
+$agency = $_POST['agency'];
 
 
 $to = "evgeniykazaktest@gmail.com";
@@ -17,6 +17,7 @@ $subject = "Заявка c сайта";
 
 $msg = "
     Имя: $name 
+	 Агенство: $agency
     Телефон: $phone 
     Почта: $email 
     Сообщение: $text";

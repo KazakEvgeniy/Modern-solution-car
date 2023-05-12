@@ -318,7 +318,7 @@
 							Управление авторазборкой и 1С: Бухгалтерия
 						</p>
 					</div>
-					<img class="product-integration__img" src="./img/product/integration2.png" alt="" width="500"
+					<img class="product-integration__img" src="./img/product/integration2.png" alt="Интеграция" width="500"
 						height="500">
 				</div>
 
@@ -355,7 +355,7 @@
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
 							<div class="cases__slide-box">
-								<img class="cases-slide__logo" src="./img/cases/logo_kriogaz_1x.png" alt="logo">
+								<img class="cases-slide__logo" src="./img/cases/logo_kriogaz_1x.png" alt="Криогаз">
 								<div class="cases-slide__item">
 									<h3 class="cases-slide__title">ЗАО "КРИОГАЗ"</h3>
 									<p class="cases-slide__desc">
@@ -402,7 +402,7 @@
 						</div>
 						<div class="swiper-slide">
 							<div class="cases__slide-box">
-								<img class="cases-slide__logo" src="./img/cases/logo_BBraun_1x.png" alt="logo">
+								<img class="cases-slide__logo" src="./img/cases/logo_BBraun_1x.png" alt="Braun">
 								<div class="cases-slide__item">
 									<h3 class="cases-slide__title">ЗАО "КРИОГАЗ"</h3>
 									<p class="cases-slide__desc">
@@ -449,7 +449,7 @@
 						</div>
 						<div class="swiper-slide">
 							<div class="cases__slide-box">
-								<img class="cases-slide__logo" src="./img/cases/Baltkam_1x.png" alt="logo">
+								<img class="cases-slide__logo" src="./img/cases/Baltkam_1x.png" alt="Балткам">
 								<div class="cases-slide__item">
 									<h3 class="cases-slide__title">ЗАО "КРИОГАЗ"</h3>
 									<p class="cases-slide__desc">
@@ -596,16 +596,19 @@
 			<div class="modal__content">
 				<form action="server.php" class="form" method="post">
 					<h2 class="form__title"></h2>
-					<div class="form__close"><img src="./img/modal/cross.svg" alt="icon" class="modal__close-img">
+					<div class="form__close"><img src="./img/modal/cross.svg" alt="Закрыть" class="modal__close-img">
 					</div>
 					<label for="name">Ваше имя</label>
-					<input type="text" id="name" name="name">
+					<input type="text" id="name" name="name" required>
+
+					<label for="agency">Организация</label>
+					<input type="text" id="agency" name="agency" required>
 
 					<label for="phone">Телефон</label>
 					<input class="phone" type="tel" id="phone" name="phone" required>
 
 					<label for="email">Email</label>
-					<input type="email" id="email" name="email">
+					<input type="email" id="email" name="email" required>
 
 					<label for="text">Комментарий</label>
 					<textarea id="text" name="text"></textarea>
