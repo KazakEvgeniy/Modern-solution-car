@@ -16,10 +16,14 @@ import { sendForm } from './modules/sendForm';
 
 
 
+
 document.addEventListener('DOMContentLoaded', (e) => {
 	e.preventDefault();
 
 	sendForm();
+
+	// console.log(process.env.DB_HOST);
+	// console.log(mode);
 
 
 	const menu = document.querySelector('.menu'),

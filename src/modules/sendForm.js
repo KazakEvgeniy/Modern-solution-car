@@ -92,7 +92,7 @@ export function sendForm() {
 			});
 
 
-			fetch('server.php', {
+			fetch('mail.php', {
 				method: 'POST',
 				headers: {
 					'Content-type': 'application/json'
