@@ -11,7 +11,6 @@ import './pages/analytics.html';
 import './index.scss';
 import './modules/sendForm';
 import Swiper from 'swiper/bundle';
-import SwiperCore, { Navigation, Pagination } from 'swiper/core';
 import { sendForm } from './modules/sendForm';
 
 
@@ -19,12 +18,7 @@ import { sendForm } from './modules/sendForm';
 
 document.addEventListener('DOMContentLoaded', (e) => {
 	e.preventDefault();
-
 	sendForm();
-
-	// console.log(process.env.DB_HOST);
-	// console.log(mode);
-
 
 	const menu = document.querySelector('.menu'),
 		headerContacts = document.querySelector('.header__contacts'),
@@ -33,6 +27,45 @@ document.addEventListener('DOMContentLoaded', (e) => {
 		headerWrapper = document.querySelector('.header__wrapper'),
 		header = document.querySelector('.header'),
 		menuBurger = document.querySelector('.menu-burger');
+
+
+
+	// скролл........................
+
+
+	menuListLink.forEach((item) => {
+
+		item.addEventListener('click', (e) => {
+
+
+
+
+			if (location.pathname === '/') {
+
+				const linkAttr = item.getAttribute(['data-anchor']);
+
+				localStorage.setItem('anchor', linkAttr);
+
+				document.querySelector(linkAttr).scrollIntoView({
+					behavior: 'smooth',
+					block: 'start'
+				})
+			} else {
+				localStorage.getItem('anchor', linkAttr);
+			}
+
+
+
+		})
+
+
+
+
+	});
+
+
+
+
 
 
 
@@ -83,16 +116,19 @@ document.addEventListener('DOMContentLoaded', (e) => {
 			const scroll = window.pageYOffset;
 			if (scroll === 0) {
 				hideTopMenuOnScroll();
-			} else {
 
+			} else {
 				showTopMenuOnScroll();
+
 			}
 
 		});
 	}
 
 
-
+	// function hideGrid() {
+	// 	history.pushState("", document.title, window.location.pathname);
+	// }
 
 
 

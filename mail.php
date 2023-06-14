@@ -8,7 +8,7 @@ $text = $_POST['text'];
 $agency = $_POST['agency'];
 
 
-$to = "evgeniykazaktest@gmail.com";
+$to = "modern.solution@yandex.by";
 $date = date("d.m.Y");
 $time = date("h:i");
 $from = $email;

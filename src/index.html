@@ -15,7 +15,7 @@
 	<header class="header">
 		<div class="container">
 			<div class="header__wrapper header__wrapper--line">
-				<a href="#" class="logo">
+				<a href="http://ms-auto.by" class="logo">
 					<img class="logo__img" src="./img/logo/logo2.png" alt="logo">
 					<span class="header__logo-text">MODERN SOLUTION</span>
 				</a>
@@ -65,16 +65,22 @@
 			<nav class="menu">
 				<ul class="menu__list">
 					<li class="menu__list-item">
-						<a class="menu__list-link" href="#product">возможности</a>
+						<!-- <button class="menu__list-link">Возможность</button> -->
+						<!-- <a onclick="localStorage.setItem('anchor','#product')" class="menu__list-link"
+							href="/">возможности</a> -->
+						<button class="menu__list-link" data-anchor="#product">возможности</button>
 					</li>
 					<li class="menu__list-item">
-						<a class="menu__list-link" href="#advantage">преимущества</a>
+
+						<button class="menu__list-link" data-anchor="#advantage">преимущества</button>
 					</li>
 					<li class="menu__list-item">
-						<a class="menu__list-link" href="#cases">кейсы</a>
+
+						<button class="menu__list-link" data-anchor="#cases">кейсы</button>
 					</li>
 					<li class="menu__list-item">
-						<a class="menu__list-link" href="#contacts">контакты</a>
+
+						<button class="menu__list-link" data-anchor="#contacts">контакты</button>
 					</li>
 					<li class="menu__list-item menu__list-item--btn">
 						<button class="request-btn" type="button" data-modal="modal">ОСТАВИТЬ ЗАЯВКУ</button>
