@@ -190,6 +190,9 @@
 }
 
 .menu__list-link {
+	cursor: pointer;
+	border: none;
+	background: none;
 	text-transform: uppercase;
 	display: block;
 	color: #474646;
@@ -319,9 +322,15 @@
 	grid-template-columns: minmax(320px, 700px) auto;
 }
 
-.management__desc {
-	padding: 30px 30px 0 0;
+.management__desc{
 	line-height: 36px;
+}
+.management__desc:not(:last-child) {
+	margin-bottom: 30px;
+	
+}
+.management__item {
+	margin:  30px 30px 0 0;
 }
 
 //  product
@@ -654,7 +663,8 @@
 .marketing__wrapper {
 	display: grid;
 	grid-template-columns: minmax(320px, 600px) auto;
-	align-items: center;
+	align-items: start;
+	padding: 130px 0 25px;
 }
 
 .marketing__content {
@@ -676,12 +686,23 @@
 	line-height: 24px;
 }
 
-.marketing__desc-item {
-	margin-bottom: 5px;
+.marketing__desc-item,
+.marketing__crm-desc {
+	margin-bottom: 15px;
 }
 
 .marketing__desc-item:last-child {
 	margin-bottom: 25px;
+}
+
+.marketing__crm-item{
+	@extend %Montserrat-500;
+	font-size: 16px;
+	line-height: 22px;
+}
+.marketing__crm-item:not(:last-child){
+	margin-bottom: 5px;
+	
 }
 
 .marketing__items {
@@ -728,7 +749,8 @@
 .accounting__wrapper {
 	display: grid;
 	grid-template-columns: minmax(320px, 700px) auto;
-	align-items: center;
+	align-items: start;
+	padding: 130px 0 25px;
 }
 
 .accounting__box {
@@ -736,8 +758,8 @@
 }
 
 .accounting__desc {
-	margin-bottom: 40px;
-	line-height: 32px;
+	margin-bottom: 25px;
+	line-height: 28px;
 }
 
 //   spares
@@ -745,7 +767,8 @@
 .spares__wrapper {
 	display: grid;
 	grid-template-columns: minmax(320px, 650px) auto;
-	align-items: end;
+	align-items: center;
+	padding: 130px 0 25px;
 }
 
 .spares__inner {
@@ -759,7 +782,27 @@
 .spares__desc-item>p {
 	font-size: 18px;
 	line-height: 24px;
+	margin-bottom: 25px;
 }
+
+
+.spares__auto-item{
+	@extend %Montserrat-500;
+	font-size: 16px;
+	line-height: 22px;
+}
+.spares__auto-item:not(:last-child){
+	margin-bottom: 5px;
+	
+}
+
+
+
+
+
+
+
+
 
 .spares__desc-item {
 	margin-bottom: 5px;
@@ -773,6 +816,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-end;
+	
 }
 
 // stock
@@ -780,7 +824,8 @@
 .stock__wrapper {
 	display: grid;
 	grid-template-columns: minmax(320px, 650px) auto;
-	align-items: center;
+	align-items: start;
+	padding: 130px 0 25px;
 }
 
 .stock__content {
@@ -835,7 +880,8 @@
 .purchase__wrapper {
 	display: grid;
 	grid-template-columns: minmax(320px, 700px) auto;
-	align-items: center;
+	align-items: start;
+	padding: 130px 0 25px;
 }
 
 .purchase__content {

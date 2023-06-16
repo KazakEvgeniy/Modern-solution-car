@@ -13,9 +13,6 @@ import './modules/sendForm';
 import Swiper from 'swiper/bundle';
 import { sendForm } from './modules/sendForm';
 
-
-
-
 document.addEventListener('DOMContentLoaded', (e) => {
 	e.preventDefault();
 	sendForm();
@@ -28,109 +25,83 @@ document.addEventListener('DOMContentLoaded', (e) => {
 		header = document.querySelector('.header'),
 		menuBurger = document.querySelector('.menu-burger');
 
-
-
 	// скролл........................
 
-
 	menuListLink.forEach((item) => {
-
 		item.addEventListener('click', (e) => {
-
-
-
-
+			const anchor = item.getAttribute(['data-anchor']);
 			if (location.pathname === '/') {
-
-				const linkAttr = item.getAttribute(['data-anchor']);
-
-				localStorage.setItem('anchor', linkAttr);
-
-				document.querySelector(linkAttr).scrollIntoView({
+				document.querySelector(anchor).scrollIntoView({
 					behavior: 'smooth',
 					block: 'start'
-				})
+				});
 			} else {
-				localStorage.getItem('anchor', linkAttr);
+				localStorage.setItem('anchor', anchor);
 			}
-
-
-
-		})
-
-
-
-
+		});
 	});
 
+	if (location.pathname === '/') {
+		let anchor = localStorage.getItem('anchor');
+		if (anchor) {
+			document.querySelector(anchor).scrollIntoView({
+				behavior: 'smooth',
+				block: 'start'
+			});
+		}
+	}
 
-
-
-
-
-
-	function headerMobile() { //скрывает/показывает меню при клике
+	function headerMobile() {
+		//скрывает/показывает меню при клике
 		menuList.classList.toggle('header-mobile--menu');
-	};
+	}
 
-	function hideTopMenuOnScroll() { //скрывает меню при скролле
+	function hideTopMenuOnScroll() {
+		//скрывает меню при скролле
 		header.classList.remove('header--top');
 		headerWrapper.classList.add('header__wrapper--line');
-		menuListLink.forEach(link => link.classList.remove('menu__list-link--size'));
+		menuListLink.forEach((link) => link.classList.remove('menu__list-link--size'));
 		menu.classList.remove('menu--top');
 		headerContacts.classList.remove('header__contacts--top');
 		menuList.classList.remove('menu__list--top');
 	}
 
-	function showTopMenuOnScroll() { // показываеет основное меню в статике
+	function showTopMenuOnScroll() {
+		// показываеет основное меню в статике
 		header.classList.add('header--top');
 		headerWrapper.classList.remove('header__wrapper--line');
 		menu.classList.add('menu--top');
 		headerContacts.classList.add('header__contacts--top');
 		menuList.classList.add('menu__list--top');
-		menuListLink.forEach(link => link.classList.add('menu__list-link--size'));
+		menuListLink.forEach((link) => link.classList.add('menu__list-link--size'));
 	}
-
 
 	menuBurger.addEventListener('click', () => {
 		headerMobile();
 	});
 
 	menuListLink.forEach((item) => {
-
 		item.addEventListener('click', () => {
 			headerMobile();
-		})
-
+		});
 	});
-
 
 	if (header.classList.contains('header--hide-top')) {
 		header.classList.add('header--top');
 		headerWrapper.classList.remove('header__wrapper--line');
 		menu.classList.add('menu--top');
 		menuList.classList.add('menu__list--top');
-		menuListLink.forEach(link => link.classList.add('menu__list-link--size'));
+		menuListLink.forEach((link) => link.classList.add('menu__list-link--size'));
 	} else {
 		window.addEventListener('scroll', () => {
 			const scroll = window.pageYOffset;
 			if (scroll === 0) {
 				hideTopMenuOnScroll();
-
 			} else {
 				showTopMenuOnScroll();
-
 			}
-
 		});
 	}
-
-
-	// function hideGrid() {
-	// 	history.pushState("", document.title, window.location.pathname);
-	// }
-
-
 
 
 	// cases-slide
@@ -143,30 +114,23 @@ document.addEventListener('DOMContentLoaded', (e) => {
 		allowTouchMove: false,
 		loop: true,
 		autoplay: {
-			delay: 2000,
+			delay: 2000
 		},
 		pagination: {
 			el: '.cases-pagination',
 			type: 'bullets',
 			clickable: true,
 			renderBullet: function (index, className) {
-
 				return `
 
 					<li class="${className}">
 					 ${casesList[index].innerHTML}
 					</li>
 
-			`
+			`;
+			}
+		}
+	});
 
-			},
-		},
-
-
-	})
-
-	casesList.forEach(item => item.remove());
-
-})
-
-
+	casesList.forEach((item) => item.remove());
+});
