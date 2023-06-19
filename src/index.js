@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
 		allowTouchMove: false,
 		loop: true,
 		autoplay: {
-			delay: 2000
+			delay: 5000
 		},
 		pagination: {
 			el: '.cases-pagination',

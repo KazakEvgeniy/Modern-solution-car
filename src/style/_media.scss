@@ -235,9 +235,7 @@
 		margin-right: unset;
 	}
 
-	.accounting__wrapper,
-	.delivery__wrapper,
-	.analytics__wrapper {
+	.accounting__wrapper {
 		text-align: center;
 	}
 
@@ -268,7 +266,9 @@
 		grid-template-rows: 1fr auto;
 
 	}
-
+	.management__item {
+		margin-right: unset;
+		}
 	.management__desc {
 		padding: 0;
 		text-align: center;
